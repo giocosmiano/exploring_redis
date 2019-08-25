@@ -7,59 +7,59 @@
   - make sure to run `make`
 
 ```bash
-wget http://download.redis.io/redis-stable.tar.gz
-tar xvzf redis-stable.tar.gz
-cd redis-stable
-make
+   $ wget http://download.redis.io/redis-stable.tar.gz
+   $ tar xvzf redis-stable.tar.gz
+   $ cd redis-stable
+   $ make
 ```
 
 - Add these settings to `.bashrc` for personal preference
 
 ```bash
-export APPLICATIONS_HOME="${HOME}/Documents/_applications"
-export REDIS_HOME="${APPLICATIONS_HOME}/redis-5.0.5"
-export REDIS_BIN="${REDIS_HOME}/src"
+   export APPLICATIONS_HOME="${HOME}/Documents/_applications"
+   export REDIS_HOME="${APPLICATIONS_HOME}/redis-5.0.5"
+   export REDIS_BIN="${REDIS_HOME}/src"
 
-alias redis-server='cd ${REDIS_BIN}; ./redis-server'
-alias redis-cli='cd ${REDIS_BIN}; ./redis-cli'
+   alias redis-server='cd ${REDIS_BIN}; ./redis-server'
+   alias redis-cli='cd ${REDIS_BIN}; ./redis-cli'
 
-alias redis-restart='sudo systemctl restart redis.server'
-alias redis-start='sudo systemctl start redis.server'
-alias redis-stop='sudo systemctl stop redis.server'
-alias redis-status='sudo systemctl status redis.server'
-alias redis-enable='sudo systemctl enable redis.server'
-alias redis-disable='sudo systemctl disable redis.server'
+   alias redis-restart='sudo systemctl restart redis.server'
+   alias redis-start='sudo systemctl start redis.server'
+   alias redis-stop='sudo systemctl stop redis.server'
+   alias redis-status='sudo systemctl status redis.server'
+   alias redis-enable='sudo systemctl enable redis.server'
+   alias redis-disable='sudo systemctl disable redis.server'
 ```
 
 - Configure to start `redis` automatically with the server
 
 ```bash
-sudo cp redis.service /etc/systemd/system
+   $ sudo cp redis.service /etc/systemd/system
 ```
 
 - Update the `systemd` service after copying `redis` services 
 
 ```bash
-sudo systemctl daemon-reload
+   $ sudo systemctl daemon-reload
 ```
 
 - Enable to auto-start `redis` service
 
 ```bash
-redis-enable
+   $ redis-enable
 ```
 
 - Start/Re-Start `redis` service
 
 ```bash
-redis-start
-redis-restart
+   $ redis-start
+   $ redis-restart
 ```
 
 - Check `redis` version
 
 ```bash
-redis-server --version
+   $ redis-server --version
 ```
 
 - Installing `Redis Desktop Manager` UI
