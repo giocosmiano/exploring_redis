@@ -56,6 +56,12 @@ redis-start
 redis-restart
 ```
 
+- Check `redis` version
+
+```bash
+redis-server --version
+```
+
 - Installing `Redis Desktop Manager` UI
   - [Redis Desktop Manager](https://redisdesktop.com/)
   - [Install RedisDesktopManager using `Snapcraft` in Ubuntu](https://snapcraft.io/redis-desktop-manager)
