@@ -23,12 +23,12 @@
    alias redis-server='cd ${REDIS_BIN}; ./redis-server'
    alias redis-cli='cd ${REDIS_BIN}; ./redis-cli'
 
-   alias redis-restart='sudo systemctl restart redis.server'
-   alias redis-start='sudo systemctl start redis.server'
-   alias redis-stop='sudo systemctl stop redis.server'
-   alias redis-status='sudo systemctl status redis.server'
-   alias redis-enable='sudo systemctl enable redis.server'
-   alias redis-disable='sudo systemctl disable redis.server'
+   alias redis-restart='sudo systemctl restart redis.service'
+   alias redis-start='sudo systemctl start redis.service'
+   alias redis-stop='sudo systemctl stop redis.service'
+   alias redis-status='sudo systemctl status redis.service'
+   alias redis-enable='sudo systemctl enable redis.service'
+   alias redis-disable='sudo systemctl disable redis.service'
 ```
 
 - Configure to start `redis` automatically with the server
